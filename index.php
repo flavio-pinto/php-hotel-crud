@@ -1,3 +1,7 @@
+<?php
+include __DIR__ . '/partials/server.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
     <title>PHP MYSQL CRUD</title>
 </head>
 <body>
-    
+    <?php var_dump($rooms);?> 
     <!-- JAVASCRIPT -->
     <script src="dist/assets/scripts/main.js"></script>
 </body>
