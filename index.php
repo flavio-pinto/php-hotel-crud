@@ -27,7 +27,7 @@ include __DIR__ . '/partials/doctype-top.php';
                             <td><?php echo $room['id'] ?></td>
                             <td><?php echo $room['room_number'] ?></td>
                             <td><?php echo $room['floor'] ?></td>
-                            <td><a class="text-info font-weight-bold" href="">Visualizza stanza</a></td>
+                            <td><a class="text-info font-weight-bold" href="./show.php?id=<?php echo $room['id'] ?>">Visualizza stanza</a></td>
                             <td><a class="text-primary font-weight-bold" href="">Aggiorna</a></td>
                             <td><a class="text-danger font-weight-bold" href="">Cancella</a></td>
                         </tr>
