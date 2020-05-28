@@ -1,16 +1,8 @@
 <?php
 include __DIR__ . '/partials/server.php';
+//Include doctype top from partials
+include __DIR__ . '/partials/doctype-top.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/assets/styles/styles.css">
-    <title>PHP MYSQL CRUD</title>
-</head>
-<body class="p-5">
     <header>
         <h1 class="text-center text-primary mb-4">Stanze Hotel</h1>
     </header>
@@ -41,11 +33,10 @@ include __DIR__ . '/partials/server.php';
                         </tr>
                     <?php }
                 } ?>
-                
             </tbody>
         </table>
     </main>
-    <!-- JAVASCRIPT -->
-    <script src="dist/assets/scripts/main.js"></script>
-</body>
-</html>
+<?php 
+//Include doctype bottom from partials
+include __DIR__ . '/partials/doctype-bottom.php';
+?>
