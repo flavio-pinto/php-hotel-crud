@@ -1,8 +1,17 @@
 <?php
-include __DIR__ . '/partials/server.php';
+include_once __DIR__ . '/partials/server.php';
 //Include doctype top from partials
-include __DIR__ . '/partials/doctype-top.php';
+include_once __DIR__ . '/partials/doctype-top.php';
+//Include nav from partials
+include_once __DIR__ . '/partials/nav.php';
 ?>
+<?php //Alert
+if (!empty($_GET['del'])) {?>
+    <div class="alert alert-success">
+        Stanza eliminata con successo!
+    </div>
+<?php } ?>
+
     <header>
         <h1 class="text-center text-primary mb-4">Stanze Hotel</h1>
     </header>
@@ -29,7 +38,12 @@ include __DIR__ . '/partials/doctype-top.php';
                             <td><?php echo $room['floor'] ?></td>
                             <td><a class="text-info font-weight-bold" href="./show.php?id=<?php echo $room['id'] ?>">Visualizza stanza</a></td>
                             <td><a class="text-primary font-weight-bold" href="">Aggiorna</a></td>
-                            <td><a class="text-danger font-weight-bold" href="">Cancella</a></td>
+                            <td class="font-weight-bold">
+                                <form action="./partials/delete/server.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+                                    <input class="btn btn-danger" type="submit" value="Delete">
+                                </form>
+                            </td>
                         </tr>
                     <?php }
                 } ?>
