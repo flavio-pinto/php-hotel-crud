@@ -1,9 +1,11 @@
 <?php
 //Ottieni dettagli stanza
-include __DIR__ . '/partials/show/server.php';
+include_once __DIR__ . '/partials/show/server.php';
 
 //Include doctype top from partials
-include __DIR__ . '/partials/doctype-top.php';
+include_once __DIR__ . '/partials/doctype-top.php';
+//Include nav from partials
+include_once __DIR__ . '/partials/nav.php';
 ?>
     <header>
         <h1 class="text-center text-primary mb-4">Dettagli stanza: <?php echo $room['room_number'] ?></h1>
@@ -17,7 +19,7 @@ include __DIR__ . '/partials/doctype-top.php';
             <li class="list-group-item">Piano: <?php echo $room['floor']; ?></li>
         </ul>
     </div>
-    <a class="pulsante__navigazione__stanze" href="index.php">Torna alla pagina principale delle stanze</a>
+    <a class="btn btn-primary" href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">Aggiorna dati stanza</a> 
     <?php
         if($room['id'] > 1) { ?>
             <a class="pulsante__navigazione__stanze" href="./show.php?id=<?php echo $room['id'] - 1 ?>">&lt; Stanza precedente</a>

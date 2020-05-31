@@ -1,6 +1,6 @@
 <?php
 //Connessione al database
-include __DIR__ . '/../database.php';
+include_once __DIR__ . '/../database.php';
 
 //Ottengo id stanza
 $room_id = $_GET['id'];
