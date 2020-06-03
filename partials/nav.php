@@ -7,5 +7,8 @@
         <li class="nav-item">
             <a class="nav-link" href="<?php echo $base_path ?>create.php">Nuova stanza</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo $base_path ?>bookings.php">Prenotazioni</a>
+        </li>
     </ul>
 </nav>
