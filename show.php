@@ -17,6 +17,8 @@ include_once __DIR__ . '/partials/nav.php';
             <li class="list-group-item">Numero Stanza: <?php echo $room['room_number']; ?></li>
             <li class="list-group-item">Posti letto: <?php echo $room['beds']; ?></li>
             <li class="list-group-item">Piano: <?php echo $room['floor']; ?></li>
+            <li class="list-group-item">Created at: <?php echo $room['created_at']; ?></li>
+            <li class="list-group-item">Updated at: <?php echo $room['updated_at']; ?></li>
         </ul>
     </div>
     <a class="btn btn-primary" href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">Aggiorna dati stanza</a> 
