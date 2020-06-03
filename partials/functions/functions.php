@@ -20,3 +20,22 @@ function getAllData($connection, $table) {
 
     return $records;
 }
+
+//Funzione per prendere singolo record tramite id
+function getSingleRecordById($connection, $table, $id) {
+    $sql = "SELECT * FROM `$table` WHERE `id` = $id";
+    $results = $connection->query($sql);
+
+    if($connection && $results->num_rows >= 1) { //caso in cui ci sono una o più rows
+        $record = $results->fetch_assoc();
+    } elseif ($results) { //caso in cui non c'è errore ma ci sono zero rows
+        $record = [];
+    } else { //in caso di false
+        $record = false;
+    }
+
+    //Chiusura connessione al database
+    $connection->close();
+
+    return $record;
+}
