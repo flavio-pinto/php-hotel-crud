@@ -1,7 +1,7 @@
 <?php
 //Funzione per ottenere tutti i dati da una tabella del database
 function getAllData($connection, $table) {
-    $sql = "SELECT * FROM `stanze`";
+    $sql = "SELECT * FROM `$table`";
     $results = $connection->query($sql);
 
     //Valuto vari casi con un if
