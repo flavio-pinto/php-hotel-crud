@@ -5,7 +5,7 @@
             <a class="nav-link" href="<?php echo $base_path ?>">Home Stanze</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo $base_path ?>">Nuova stanza</a>
+            <a class="nav-link" href="<?php echo $base_path ?>create.php">Nuova stanza</a>
         </li>
     </ul>
 </nav>
