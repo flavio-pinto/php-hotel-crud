@@ -33,12 +33,12 @@ if (!empty($_GET['del'])) {?>
                 if(!empty($rooms)) {
                     foreach($rooms as $room) {?>
                         <tr>
-                            <td><?php echo $room['id'] ?></td>
-                            <td><?php echo $room['room_number'] ?></td>
-                            <td><?php echo $room['floor'] ?></td>
-                            <td><a class="text-info font-weight-bold" href="./show.php?id=<?php echo $room['id'] ?>">Visualizza stanza</a></td>
-                            <td><a class="text-primary font-weight-bold" href="./edit.php?id=<?php echo $room['id'] ?>">Aggiorna info</a></td>
-                            <td class="font-weight-bold">
+                            <td class="align-middle"><?php echo $room['id'] ?></td>
+                            <td class="align-middle"><?php echo $room['room_number'] ?></td>
+                            <td class="align-middle"><?php echo $room['floor'] ?></td>
+                            <td class="text-right align-middle"><a class="text-info font-weight-bold" href="./show.php?id=<?php echo $room['id'] ?>">Visualizza stanza</a></td>
+                            <td class="text-right align-middle"><a class="text-primary font-weight-bold" href="./edit.php?id=<?php echo $room['id'] ?>">Aggiorna info</a></td>
+                            <td class="font-weight-bold text-right">
                                 <form action="./partials/delete/server.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
                                     <input class="btn btn-danger" type="submit" value="Delete">

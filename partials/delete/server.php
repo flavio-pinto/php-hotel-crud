@@ -1,6 +1,8 @@
 <?php
 //Connessione al database
 include_once __DIR__ . '/../database.php';
+//Includo funzione per eliminare record da db
+include __DIR__ . '/../functions/functions.php';
 
 //Ottengo room ID
 if (empty($_POST['id'])) {
@@ -8,18 +10,7 @@ if (empty($_POST['id'])) {
 }
 
 $room_id = $_POST['id'];
+$url = "$base_path?del=room"; //ho messo room per chiarezza ma potrebbe essere qualsiasi altra parola
 
-//Query
-$sql = "DELETE FROM `stanze` WHERE `id` = $room_id";
-$results = $connection->query($sql);
-
-if ($results && $connection->affected_rows > 0) {
-    header("Location: $base_path?del=1");
-} elseif ($results) {
-    echo 'Stanza non trovata';
-} else {
-    echo 'Si è verificato un errore';
-}
-
-//Chiusura connessione al database
-$connection->close();
+//Richiamo funzione per fare query per eliminare stanza
+deleteById($connection, 'stanze', $room_id, $url);
