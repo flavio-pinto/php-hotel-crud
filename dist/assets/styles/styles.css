@@ -9994,6 +9994,16 @@ h3 {
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  flex-grow: 1;
+}
+
 .pulsante__navigazione__stanze {
   display: block;
 }

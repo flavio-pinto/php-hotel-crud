@@ -27,6 +27,8 @@ include_once __DIR__ . '/partials/nav.php';
             <input class="btn btn-primary" type="submit" value="Invia">
         </div>
     </form>
+
+    <a class="btn btn-primary" href="<?php echo $base_path; ?>show.php?id=<?php echo $room['id']; ?>">Dettagli stanza</a>
 <?php 
 //Include doctype bottom from partials
 include __DIR__ . '/partials/doctype-bottom.php';

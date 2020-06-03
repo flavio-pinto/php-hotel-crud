@@ -10,3 +10,5 @@ include_once __DIR__ . '/../env.php';
     <title>PHP MYSQL CRUD</title>
 </head>
 <body>
+
+<div id="app" class="pb-2">
