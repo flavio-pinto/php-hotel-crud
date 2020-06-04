@@ -22,14 +22,6 @@ include_once __DIR__ . '/partials/nav.php';
         </ul>
     </div>
     <a class="btn btn-primary" href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">Aggiorna dati stanza</a> 
-    <?php
-        if($room['id'] > 1) { ?>
-            <a class="pulsante__navigazione__stanze" href="./show.php?id=<?php echo $room['id'] - 1 ?>">&lt; Stanza precedente</a>
-    <?php } ?>
-
-    <?php if ($room['id'] < 15) { ?>
-            <a class="pulsante__navigazione__stanze" href="./show.php?id=<?php echo $room['id'] + 1 ?>">Stanza successiva &gt;</a>
-    <?php } ?>
 <?php 
 //Include doctype bottom from partials
 include __DIR__ . '/partials/doctype-bottom.php';
